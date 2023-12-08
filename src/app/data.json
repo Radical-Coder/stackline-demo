@@ -1969,5 +1969,396 @@
         "retailerMargin": 164222
       }
     ]
+  },
+  {
+    "id": "456-7-89-101112-13",
+    "title": "The Ultimate Cooking Set",
+    "image": "ultimate_cooking_set.jpeg",
+    "brand": "KitchenPro",
+    "retailer": "ShopMax",
+    "subtitle": "A Comprehensive Set by Chef L. Gordon",
+    "reviews": [
+      {
+        "customer": "CookingFan",
+        "review": "An excellent cooking set. The quality is top-notch and the variety of utensils is impressive. Highly recommended for any cooking enthusiast.",
+        "score": 5
+      }
+    ],
+    "details": [
+      "Includes 20 different kitchen utensils",
+      "Made with high-quality stainless steel",
+      "Dishwasher safe"
+    ],
+    "tags": [
+      "Cooking",
+      "Kitchenware",
+      "Professional"
+    ],
+    "sales": [
+      {
+        "weekEnding": "2021-01-01",
+        "retailSales": 473402,
+        "wholesaleSales": 565652,
+        "unitsSold": 685,
+        "retailerMargin": 129418
+      },
+      {
+        "weekEnding": "2021-01-08",
+        "retailSales": 592896,
+        "wholesaleSales": 964370,
+        "unitsSold": 623,
+        "retailerMargin": 9644
+      },
+      {
+        "weekEnding": "2021-01-15",
+        "retailSales": 404440,
+        "wholesaleSales": 901619,
+        "unitsSold": 529,
+        "retailerMargin": 152383
+      },
+      {
+        "weekEnding": "2021-01-22",
+        "retailSales": 881516,
+        "wholesaleSales": 756404,
+        "unitsSold": 644,
+        "retailerMargin": 35885
+      },
+      {
+        "weekEnding": "2021-01-29",
+        "retailSales": 602604,
+        "wholesaleSales": 254996,
+        "unitsSold": 321,
+        "retailerMargin": 161772
+      },
+      {
+        "weekEnding": "2021-02-05",
+        "retailSales": 275401,
+        "wholesaleSales": 260131,
+        "unitsSold": 463,
+        "retailerMargin": 192693
+      },
+      {
+        "weekEnding": "2021-02-12",
+        "retailSales": 974314,
+        "wholesaleSales": 346843,
+        "unitsSold": 913,
+        "retailerMargin": 27097
+      },
+      {
+        "weekEnding": "2021-02-19",
+        "retailSales": 347097,
+        "wholesaleSales": 973715,
+        "unitsSold": 961,
+        "retailerMargin": 46718
+      },
+      {
+        "weekEnding": "2021-02-26",
+        "retailSales": 94372,
+        "wholesaleSales": 73783,
+        "unitsSold": 522,
+        "retailerMargin": 168262
+      },
+      {
+        "weekEnding": "2021-03-05",
+        "retailSales": 674171,
+        "wholesaleSales": 377479,
+        "unitsSold": 619,
+        "retailerMargin": 169282
+      },
+      {
+        "weekEnding": "2021-03-12",
+        "retailSales": 143220,
+        "wholesaleSales": 542049,
+        "unitsSold": 312,
+        "retailerMargin": 180784
+      },
+      {
+        "weekEnding": "2021-03-19",
+        "retailSales": 866115,
+        "wholesaleSales": 224158,
+        "unitsSold": 127,
+        "retailerMargin": 63474
+      },
+      {
+        "weekEnding": "2021-03-26",
+        "retailSales": 763586,
+        "wholesaleSales": 38241,
+        "unitsSold": 566,
+        "retailerMargin": 134493
+      },
+      {
+        "weekEnding": "2021-04-02",
+        "retailSales": 327497,
+        "wholesaleSales": 46778,
+        "unitsSold": 278,
+        "retailerMargin": 199596
+      },
+      {
+        "weekEnding": "2021-04-09",
+        "retailSales": 871765,
+        "wholesaleSales": 398319,
+        "unitsSold": 672,
+        "retailerMargin": 168306
+      },
+      {
+        "weekEnding": "2021-04-16",
+        "retailSales": 458363,
+        "wholesaleSales": 183446,
+        "unitsSold": 143,
+        "retailerMargin": 131427
+      },
+      {
+        "weekEnding": "2021-04-23",
+        "retailSales": 407098,
+        "wholesaleSales": 66323,
+        "unitsSold": 92,
+        "retailerMargin": 181921
+      },
+      {
+        "weekEnding": "2021-04-30",
+        "retailSales": 758458,
+        "wholesaleSales": 745184,
+        "unitsSold": 970,
+        "retailerMargin": 90368
+      },
+      {
+        "weekEnding": "2021-05-07",
+        "retailSales": 135528,
+        "wholesaleSales": 347423,
+        "unitsSold": 27,
+        "retailerMargin": 51098
+      },
+      {
+        "weekEnding": "2021-05-14",
+        "retailSales": 586864,
+        "wholesaleSales": 132818,
+        "unitsSold": 504,
+        "retailerMargin": 136341
+      },
+      {
+        "weekEnding": "2021-05-21",
+        "retailSales": 205116,
+        "wholesaleSales": 929108,
+        "unitsSold": 843,
+        "retailerMargin": 9896
+      },
+      {
+        "weekEnding": "2021-05-28",
+        "retailSales": 321577,
+        "wholesaleSales": 936112,
+        "unitsSold": 492,
+        "retailerMargin": 150629
+      },
+      {
+        "weekEnding": "2021-06-04",
+        "retailSales": 765833,
+        "wholesaleSales": 499930,
+        "unitsSold": 206,
+        "retailerMargin": 196535
+      },
+      {
+        "weekEnding": "2021-06-11",
+        "retailSales": 647064,
+        "wholesaleSales": 463483,
+        "unitsSold": 671,
+        "retailerMargin": 41343
+      },
+      {
+        "weekEnding": "2021-06-18",
+        "retailSales": 987036,
+        "wholesaleSales": 95186,
+        "unitsSold": 120,
+        "retailerMargin": 43565
+      },
+      {
+        "weekEnding": "2021-06-25",
+        "retailSales": 914114,
+        "wholesaleSales": 142043,
+        "unitsSold": 915,
+        "retailerMargin": 99127
+      },
+      {
+        "weekEnding": "2021-07-02",
+        "retailSales": 616655,
+        "wholesaleSales": 932132,
+        "unitsSold": 870,
+        "retailerMargin": 116041
+      },
+      {
+        "weekEnding": "2021-07-09",
+        "retailSales": 32048,
+        "wholesaleSales": 298714,
+        "unitsSold": 58,
+        "retailerMargin": 177795
+      },
+      {
+        "weekEnding": "2021-07-16",
+        "retailSales": 251606,
+        "wholesaleSales": 466238,
+        "unitsSold": 410,
+        "retailerMargin": 51530
+      },
+      {
+        "weekEnding": "2021-07-23",
+        "retailSales": 464671,
+        "wholesaleSales": 593173,
+        "unitsSold": 937,
+        "retailerMargin": 123167
+      },
+      {
+        "weekEnding": "2021-07-30",
+        "retailSales": 200243,
+        "wholesaleSales": 263815,
+        "unitsSold": 642,
+        "retailerMargin": 4421
+      },
+      {
+        "weekEnding": "2021-08-06",
+        "retailSales": 678682,
+        "wholesaleSales": 378247,
+        "unitsSold": 345,
+        "retailerMargin": 153070
+      },
+      {
+        "weekEnding": "2021-08-13",
+        "retailSales": 263000,
+        "wholesaleSales": 37744,
+        "unitsSold": 320,
+        "retailerMargin": 58395
+      },
+      {
+        "weekEnding": "2021-08-20",
+        "retailSales": 586127,
+        "wholesaleSales": 849357,
+        "unitsSold": 251,
+        "retailerMargin": 159975
+      },
+      {
+        "weekEnding": "2021-08-27",
+        "retailSales": 828053,
+        "wholesaleSales": 531688,
+        "unitsSold": 964,
+        "retailerMargin": 120905
+      },
+      {
+        "weekEnding": "2021-09-03",
+        "retailSales": 215707,
+        "wholesaleSales": 432606,
+        "unitsSold": 771,
+        "retailerMargin": 2470
+      },
+      {
+        "weekEnding": "2021-09-10",
+        "retailSales": 74305,
+        "wholesaleSales": 128589,
+        "unitsSold": 78,
+        "retailerMargin": 126349
+      },
+      {
+        "weekEnding": "2021-09-17",
+        "retailSales": 209724,
+        "wholesaleSales": 977396,
+        "unitsSold": 821,
+        "retailerMargin": 1470
+      },
+      {
+        "weekEnding": "2021-09-24",
+        "retailSales": 951097,
+        "wholesaleSales": 401568,
+        "unitsSold": 468,
+        "retailerMargin": 83145
+      },
+      {
+        "weekEnding": "2021-10-01",
+        "retailSales": 726210,
+        "wholesaleSales": 480982,
+        "unitsSold": 435,
+        "retailerMargin": 41006
+      },
+      {
+        "weekEnding": "2021-10-08",
+        "retailSales": 37974,
+        "wholesaleSales": 487914,
+        "unitsSold": 358,
+        "retailerMargin": 130894
+      },
+      {
+        "weekEnding": "2021-10-15",
+        "retailSales": 924199,
+        "wholesaleSales": 123363,
+        "unitsSold": 94,
+        "retailerMargin": 125909
+      },
+      {
+        "weekEnding": "2021-10-22",
+        "retailSales": 204468,
+        "wholesaleSales": 128357,
+        "unitsSold": 454,
+        "retailerMargin": 45474
+      },
+      {
+        "weekEnding": "2021-10-29",
+        "retailSales": 167155,
+        "wholesaleSales": 695026,
+        "unitsSold": 665,
+        "retailerMargin": 86249
+      },
+      {
+        "weekEnding": "2021-11-05",
+        "retailSales": 84475,
+        "wholesaleSales": 614398,
+        "unitsSold": 716,
+        "retailerMargin": 159639
+      },
+      {
+        "weekEnding": "2021-11-12",
+        "retailSales": 770909,
+        "wholesaleSales": 171826,
+        "unitsSold": 869,
+        "retailerMargin": 111312
+      },
+      {
+        "weekEnding": "2021-11-19",
+        "retailSales": 130658,
+        "wholesaleSales": 479898,
+        "unitsSold": 542,
+        "retailerMargin": 165980
+      },
+      {
+        "weekEnding": "2021-11-26",
+        "retailSales": 772182,
+        "wholesaleSales": 744649,
+        "unitsSold": 36,
+        "retailerMargin": 128085
+      },
+      {
+        "weekEnding": "2021-12-03",
+        "retailSales": 570551,
+        "wholesaleSales": 686061,
+        "unitsSold": 415,
+        "retailerMargin": 108688
+      },
+      {
+        "weekEnding": "2021-12-10",
+        "retailSales": 208643,
+        "wholesaleSales": 458023,
+        "unitsSold": 120,
+        "retailerMargin": 144138
+      },
+      {
+        "weekEnding": "2021-12-17",
+        "retailSales": 454655,
+        "wholesaleSales": 774259,
+        "unitsSold": 699,
+        "retailerMargin": 173583
+      },
+      {
+        "weekEnding": "2021-12-24",
+        "retailSales": 794831,
+        "wholesaleSales": 823893,
+        "unitsSold": 636,
+        "retailerMargin": 164222
+      }
+    ]
   }
 ]
