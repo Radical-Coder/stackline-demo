@@ -2,7 +2,7 @@
   {
     "id": "B007TIE0GQ",
     "title": "Shark Ninja",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/51h-a5IaHeL.jpg",
+    "image": "shark-ninja.jpg",
     "subtitle": "Magic Bullet NutriBullet 12-Piece High-Speed Blender/Mixer System",
     "brand": "Nutribullet",
     "reviews": [
@@ -20,7 +20,12 @@
       "Includes a power base, 1 tall cup, 2 short cups, 1 flat blade and 1 emulsifying blade, 2 re-sealable lids, pocket nutritionist and manual with recipes",
       "This product is manufactured in compliance with US & Canadian Electrical Standards"
     ],
-    "tags": ["Pantry", "Obsolete", "Blender", "Lightning Deal"],
+    "tags": [
+      "Pantry",
+      "Obsolete",
+      "Blender",
+      "Lightning Deal"
+    ],
     "sales": [
       {
         "weekEnding": "2017-01-01",
@@ -386,6 +391,42 @@
         "unitsSold": 855,
         "retailerMargin": 110398
       },
+      {
+        "weekEnding": "2017-12-31",
+        "retailSales": 798739,
+        "wholesaleSales": 550042,
+        "unitsSold": 822,
+        "retailerMargin": 181968
+      }
+    ]
+  },
+  {
+    "id": "B008TIE0GK",
+    "title": "Kitchen Pro",
+    "image": "/kitchen_pro.jpeg",
+    "subtitle": "Kitchen Pro Food Processor System",
+    "brand": "Kitchen Pro",
+    "reviews": [
+      {
+        "customer": "KitchenFan",
+        "review": "This food processor is a game changer. It's powerful and easy to clean. I've used it for everything from chopping vegetables to making dough. Highly recommended!",
+        "score": 5
+      }
+    ],
+    "retailer": "Amazon",
+    "details": [
+      "Effortlessly chops, slices, and blends a variety of food",
+      "High-torque power base and 700-watt motor",
+      "Power, patented blade design with cyclonic action",
+      "Includes a power base, 1 large bowl, 2 small bowls, 1 flat blade and 1 emulsifying blade, 2 re-sealable lids, recipe book",
+      "This product is manufactured in compliance with US & Canadian Electrical Standards"
+    ],
+    "tags": [
+      "Kitchen",
+      "Food Processor",
+      "Lightning Deal"
+    ],
+    "sales": [
       {
         "weekEnding": "2017-12-31",
         "retailSales": 798739,

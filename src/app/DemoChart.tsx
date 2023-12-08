@@ -1,12 +1,19 @@
 'use client';
+import { FC } from 'react';
+import Highcharts from 'highcharts/es-modules/masters/highcharts.src';
+import dynamic from 'next/dynamic';
 import data from './data.json';
-import React from 'react';
-import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
+import { Product, Sale } from './types';
 
-export default function DemoChart() {
-    const retailSales = data[0].sales.map(i => [new Date(i.weekEnding).getTime(), i.retailSales])
-    const _retailSales = retailSales.map(e => [e[0], e[1] - 700000])
+// Dynamically import HighchartsReact
+const DynamicHighchartsReact = dynamic(() => import('highcharts-react-official'), { ssr: false });
+// Assume data.json has an array of products
+const products: Product[] = data;
+
+const DemoChart: FC = () => {
+    const retailSales = products[0].sales.map((e: Sale) => [new Date(e.weekEnding).getTime(), e.retailSales]);
+    const _retailSales = retailSales.map(e => [e[0], e[1] - 700000]);
+
     const highchartOptions = {
         chart: { type: 'spline' },
         title: { text: '' },
@@ -45,7 +52,9 @@ export default function DemoChart() {
     return (
         <div className="w-full bg-white rounded-lg shadow dark:bg-gray-800">
             <h3 style={{ padding: "1rem" }}>Retail Sales</h3>
-            <HighchartsReact highcharts={Highcharts} options={highchartOptions} />
+            <DynamicHighchartsReact highcharts={Highcharts} options={highchartOptions} />
         </div>
     )
 }
+
+export default DemoChart
