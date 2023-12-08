@@ -25,17 +25,17 @@ type Sort = {
 
 const DISPLAY_NAMES: DisplayName[] = ["Week Ending", "Retail Sales", "Wholesale Sales", "Units Sold", "Retailer Margin"];
 
-export default function Home() {
+type HomeProps = {
+    sales: SalesData[];
+};
+
+export default function Home({ sales }: HomeProps) {
     const [sort, setSort] = useState<Sort>({ field: null, direction: null });
-    // const [salesData] = useState(data[0].sales);
-    // const [sort, setSort] = useState<Sort>({ field: null, direction: null });
-    const [salesData, setSalesData] = useState<SalesData[]>([]); // replace SalesData[] with the actual type of your data
+    const [salesData, setSalesData] = useState<SalesData[]>([]);
 
     useEffect(() => {
-        setSalesData(data[0].sales);
-        // Fetch data from API or props and update salesData state
-    }, []);
-
+        setSalesData(sales);
+    }, [sales]);
     const displayNames = DISPLAY_NAMES;
 
     const fieldNames = useMemo<FieldNames>(() => ({

@@ -2,17 +2,19 @@
 import { FC } from 'react';
 import Highcharts from 'highcharts/es-modules/masters/highcharts.src';
 import dynamic from 'next/dynamic';
-import data from './data.json';
 import { Product, Sale } from './types';
 
 // Dynamically import HighchartsReact
 const DynamicHighchartsReact = dynamic(() => import('highcharts-react-official'), { ssr: false });
-// Assume data.json has an array of products
-const products: Product[] = data;
 
-const DemoChart: FC = () => {
-    const retailSales = products[0].sales.map((e: Sale) => [new Date(e.weekEnding).getTime(), e.retailSales]);
+type DemoChartProps = {
+    sales: Sale[];
+};
+
+const DemoChart: FC<DemoChartProps> = ({ sales }) => {
+    const retailSales = sales.map((e: Sale) => [new Date(e.weekEnding).getTime(), e.retailSales]);
     const _retailSales = retailSales.map(e => [e[0], e[1] - 700000]);
+
 
     const highchartOptions = {
         chart: { type: 'spline' },
