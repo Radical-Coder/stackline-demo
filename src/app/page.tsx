@@ -1,5 +1,5 @@
 'use client';
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import DemoChart from './DemoChart';
 import DataTable from './DataTable';
 import data from './data.json';
@@ -13,15 +13,24 @@ const Tag: React.FC<TagProps> = ({ item }) => (
 );
 
 const Home: FC = () => {
+  const [imageIndex, setImageIndex] = useState(0);
   if (!data || data.length === 0) {
     return <div>Loading product data...</div>;
   }
 
   const product: Product = {
-    ...data[0],
+    ...data[imageIndex],
     // sales: generateProductSales(2021)
   };
   const { image, title, subtitle, tags, sales } = product;
+
+  const handleImageClick = () => {
+    setImageIndex((prevIndex) => (prevIndex + 1) % data.length);
+  };
+
+  useEffect(() => {
+    document.title = product.title || 'No Product';
+  }, [product.title]);
 
   function generateProductSales(year: number): Sale[] {
     const sales: Sale[] = [];
@@ -58,7 +67,7 @@ const Home: FC = () => {
     <div className="flex bg-gray-100 ml-8 mr-8">
       <div className="w-1/5 mr-8 bg-white rounded-lg shadow dark:bg-gray-800 ">
         <Image width={300} height={500} className='' src={image} alt={subtitle} />
-        <div className='font-bold text-lg text-center'>{title}</div>
+        <div onClick={handleImageClick} className='font-bold text-lg text-center'>{title}</div>
         <div className='text-gray-400 text-xs text-center pb-8 '>{subtitle}</div>
         <hr />
         <div className="flex flex-wrap ">
