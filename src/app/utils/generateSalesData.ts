@@ -1,4 +1,4 @@
-import { Sale } from "./types";
+import { Sale } from "../services/types";
 
 function generateProductSales(year: number): Sale[] {
     const sales: Sale[] = [];

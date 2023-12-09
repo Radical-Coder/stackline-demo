@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import data from './data.json';
+import data from '../data.json';
 import { ArrowIcon } from './ArrowIcon';
 
 

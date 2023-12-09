@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import Highcharts from 'highcharts/es-modules/masters/highcharts.src';
 import dynamic from 'next/dynamic';
-import { Product, Sale } from './types';
+import { Product, Sale } from '../services/types';
 
 // Dynamically import HighchartsReact
 const DynamicHighchartsReact = dynamic(() => import('highcharts-react-official'), { ssr: false });

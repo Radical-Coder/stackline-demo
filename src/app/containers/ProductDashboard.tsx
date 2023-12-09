@@ -1,12 +1,24 @@
 "use client"
 import { FC, useState, useEffect } from 'react';
-import DemoChart from './DemoChart';
-import DataTable from './DataTable';
-import data from './data.json';
+import DemoChart from '../components/DemoChart';
+import DataTable from '../components/DataTable';
+import data from '../data.json';
 import Image from 'next/image';
-import { TagProps, Product, Sale } from './types';
+import { TagProps, Product, Sale } from '../services/types';
+
+function useViewportWidth() {
+    const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
 
+    return width;
+}
 
 const Tag: React.FC<TagProps> = ({ item }) => (
     <div className='m-1 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500 '>
@@ -16,10 +28,9 @@ const Tag: React.FC<TagProps> = ({ item }) => (
 
 const Home: FC = () => {
     const [imageIndex, setImageIndex] = useState(0);
-
+    const width = useViewportWidth();
     const product: Product = {
         ...data[imageIndex],
-        // sales: generateProductSales(2021)
     };
     const { image, title, subtitle, tags, sales } = product;
 
@@ -36,11 +47,25 @@ const Home: FC = () => {
     }
 
     return product.title ? (
-        <div className="flex bg-gray-100 ml-8 mr-8">
-            <div className="w-1/5 mr-8 bg-white rounded-lg shadow dark:bg-gray-800 ">
-                <Image width={300} height={500} className='' src={image} alt={subtitle} />
-                <div onClick={handleImageClick} className='font-bold text-lg text-center'>{title}</div>
-                <div className='text-gray-400 text-xs text-center pb-8 '>{subtitle}</div>
+        <div className={`flex flex-col w-100 sm:flex-row ml-8 mr-8 `}>
+            <div className="w-full mb-8 sm:mb-0 sm:w-1/5 mr-8 bg-white sm:flex-col sm:flex rounded-lg shadow dark:bg-gray-800 ">
+                {width < 640 ? (
+                    <div className="flex">
+                        <Image width={100} height={100} className='' src={image} alt={subtitle} />
+                        <div className="flex flex-col">
+                            <div onClick={handleImageClick} className='font-bold text-lg text-center'>{title}</div>
+                            <div className='text-gray-400 text-xs text-center pb-8 '>{subtitle}</div>
+                        </div>
+                    </div>
+                ) : (
+                    <div className=''>
+                        <Image width={300} height={500} className='' src={image} alt={subtitle} />
+                        <div onClick={handleImageClick} className='font-bold text-lg text-center'>{title}</div>
+                        <div className='text-gray-400 text-xs text-center pb-8 '>{subtitle}</div>
+                    </div>
+                )
+                }
+
                 <hr />
                 <div className="flex flex-wrap ">
                     {tags && tags.map((item) =>
@@ -50,7 +75,7 @@ const Home: FC = () => {
                 <hr />
             </div>
 
-            <div className='w-4/5 flex flex-col'>
+            <div className='w-full sm:w-4/5 flex flex-col'>
                 <div className='w-100 mb-8'>
                     {sales && <DemoChart sales={sales} />}
                 </div>
