@@ -1,5 +1,3 @@
-// productSlice.ts
-
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 
 type Review = {
@@ -58,7 +56,7 @@ const productSlice = createSlice({
     initialState,
     reducers: {
         incrementProductIndex(state) {
-            state.currentProductIndex += 1;
+            state.currentProductIndex = (state.currentProductIndex + 1) % state.products.length;
         },
     },
     extraReducers: (builder) => {
