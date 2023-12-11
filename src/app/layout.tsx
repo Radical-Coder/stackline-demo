@@ -24,7 +24,7 @@ export default function RootLayout({
         <main className="flex flex-col bg-gray-100">
           <Navbar />
           <div className="w-full ">
-            {children}
+              {children}
           </div>
         </main>
       </body>

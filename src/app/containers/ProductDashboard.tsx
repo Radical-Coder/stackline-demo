@@ -2,9 +2,12 @@
 import { FC, useState, useEffect } from 'react';
 import DemoChart from '../components/DemoChart';
 import DataTable from '../components/DataTable';
-import data from '../data.json';
 import Image from 'next/image';
-import { TagProps, Product, Sale } from '../services/types';
+import { TagProps } from '../services/types';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts, incrementProductIndex } from '../services/productSlice';
+import { UnknownAction } from '@reduxjs/toolkit';
+import { RootState } from '../services/store';
 
 function useViewportWidth() {
     const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -27,24 +30,33 @@ const Tag: React.FC<TagProps> = ({ item }) => (
 );
 
 const Home: FC = () => {
-    const [imageIndex, setImageIndex] = useState(0);
+    const dispatch = useDispatch();
+    const { products, currentProductIndex, loading, error } = useSelector((state: RootState) => state.products);
+    const product = products[currentProductIndex];
     const width = useViewportWidth();
-    const product: Product = {
-        ...data[imageIndex],
-    };
-    const { image, title, subtitle, tags, sales } = product;
-
-    const handleImageClick = () => {
-        setImageIndex((prevIndex) => (prevIndex + 1) % data.length);
-    };
 
     useEffect(() => {
-        document.title = product.title || 'No Product';
-    }, [product.title, imageIndex]);
+        dispatch(fetchProducts() as unknown as UnknownAction);
+    }, [dispatch]);
 
-    if (!data || data.length === 0) {
-        return <div>Loading product data...</div>;
+    if (loading) {
+        return <p>Loading...</p>;
     }
+
+    if (error) {
+        return <p>Error: {error}</p>;
+    }
+
+    if (!product) {
+        return (
+            <section className="bg-white dark:bg-gray-900">
+                {/* ... (your 404 page content) */}
+            </section>
+        );
+    }
+
+    const { image, title, subtitle, tags, sales } = product;
+
 
     return product.title ? (
         <div className={`flex flex-col w-100 sm:flex-row ml-8 mr-8 `}>
@@ -53,14 +65,14 @@ const Home: FC = () => {
                     <div className="flex">
                         <Image width={100} height={100} className='' src={image} alt={subtitle} />
                         <div className="flex flex-col">
-                            <div onClick={handleImageClick} className='font-bold text-lg text-center'>{title}</div>
+                            <div onClick={() => dispatch(incrementProductIndex())} className='font-bold text-lg text-center'>{title}</div>
                             <div className='text-gray-400 text-xs text-center pb-8 '>{subtitle}</div>
                         </div>
                     </div>
                 ) : (
                     <div className=''>
                         <Image width={300} height={500} className='' src={image} alt={subtitle} />
-                        <div onClick={handleImageClick} className='font-bold text-lg text-center'>{title}</div>
+                        <div onClick={() => dispatch(incrementProductIndex())} className='font-bold text-lg text-center'>{title}</div>
                         <div className='text-gray-400 text-xs text-center pb-8 '>{subtitle}</div>
                     </div>
                 )
